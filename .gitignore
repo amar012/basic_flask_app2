@@ -1,0 +1,10 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# visual studio code files
+.vscode/
+
+# python venv env
+bfp_env/
