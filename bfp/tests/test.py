@@ -5,7 +5,7 @@ class ProjectTests(unittest.TestCase):
     
     def setUp(self):
         app.config['DEBUG'] = False
-        app.config['TEST'] = True
+        app.config['TESTING'] = True
         self.app = app.test_client()
 
         self.assertEquals(app.config['DEBUG'], False)
