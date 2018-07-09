@@ -8,6 +8,6 @@ def index():
     #breakpoint()
     #return render_template('index.html')
 
-    user = {'username': 'Miguel'}
+    #user = {'username': 'Miguel'}
     #return render_template('index.html', title="Home", user=user)
     return render_template('index.html')
