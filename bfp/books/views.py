@@ -1,13 +1,11 @@
 # from . import app
 from flask import render_template, Blueprint
+from bfp.models import Book
 
 books_blueprint = Blueprint('books', __name__, template_folder='templates')
 
 @books_blueprint.route('/', methods=("GET",))
 def index():
     #breakpoint()
-    #return render_template('index.html')
-
-    #user = {'username': 'Miguel'}
-    #return render_template('index.html', title="Home", user=user)
-    return render_template('index.html')
+    all_books = Book.query.all()
+    return render_template('books.html', books=all_books)
