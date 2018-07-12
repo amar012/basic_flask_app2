@@ -35,6 +35,21 @@
     
     <div class="container">
 	<div class="content">
+
+	    <!-- flash messages -->
+	    {% for error_msg in get_flashed_messages(category_filter=["error"]) %}
+		<div class="alert alert-danger alert-dismissable">{{ error_msg }}</div>
+	    {% endfor %}
+
+	    {% for success_msg in get_flashed_messages(category_filter=["success"]) %}
+		<div class="alert alert-danger alert-dismissable">{{ success_msg }}</div>
+	    {% endfor %}
+
+	    {% for info_msg in get_flashed_messages(category_filter=["info"]) %}
+		<div class="alert alert-danger alert-dismissable">{{ info_msg }}</div>
+	    {% endfor %}
+
+	    <!-- child template -->
 	    {% block content %}
 	    {% endblock %}
 	</div>
