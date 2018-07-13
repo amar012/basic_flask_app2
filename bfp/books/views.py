@@ -6,7 +6,7 @@ from bfp.models import Book
 from .forms import AddBookForm
 
 
-books_blueprint = Blueprint('books', __name__, template_folder='templates')
+books_blueprint = Blueprint('books', __name__)
 
 ####################################
 #	Helper Functions
